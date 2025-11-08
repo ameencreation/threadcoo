@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIKE SB DUNK - Shoe Store</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .card-content {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .card h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .sizes {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #555;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #1ebe5d;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🏬 SneakMart - Nike SB Dunk Collection
+  </header>
+
+  <div class="container">
+    <!-- Shoe Card 1 -->
+    <div class="card">
+      <img src="IMG-20251108-WA0164.jpg" alt="Nike SB Dunk Blue White">
+      <div class="card-content">
+        <h2>NIKE SB DUNK (Blue White)</h2>
+        <p class="price">₹2199</p>
+        <p class="sizes">Available Sizes: 6, 7, 8, 9, 10</p>
+        <button onclick="addToCart('NIKE SB DUNK (Blue White)')">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Shoe Card 2 -->
+    <div class="card">
+      <img src="shoe1.jpg" alt="Nike SB Dunk Green Black">
+      <div class="card-content">
+        <h2>NIKE SB DUNK (Green Black)</h2>
+        <p class="price">₹2199</p>
+        <p class="sizes">Available Sizes: 6, 7, 8, 9, 10</p>
+        <button onclick="addToCart('NIKE SB DUNK (Green Black)')">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Shoe Card 3 -->
+    <div class="card">
+      <img src="IMG-20251108-WA0165.jpg" alt="Nike SB Dunk Beige Blue">
+      <div class="card-content">
+        <h2>NIKE SB DUNK (Beige Blue)</h2>
+        <p class="price">₹2199</p>
+        <p class="sizes">Available Sizes: 6, 7, 8, 9, 10</p>
+        <button onclick="addToCart('NIKE SB DUNK (Beige Blue)')">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Shoe Card 4 -->
+    <div class="card">
+      <img src="IMG-20251108-WA0179.jpg" alt="Nike SB Dunk Monster Edition">
+      <div class="card-content">
+        <h2>NIKE SB DUNK (Monster Edition)</h2>
+        <p class="price">₹2199</p>
+        <p class="sizes">Available Sizes: 6, 7, 8, 9, 10</p>
+        <button onclick="addToCart('NIKE SB DUNK (Monster Edition)')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 SneakMart. All Rights Reserved.
+  </footer>
+
+  <script>
+    function addToCart(productName) {
+      const message = `Hello! I want to order ${productName} (Price: ₹2199). Please confirm availability.`;
+      const phoneNumber = "918129151302"; // WhatsApp number
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
